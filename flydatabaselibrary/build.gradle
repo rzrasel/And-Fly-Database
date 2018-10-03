@@ -14,8 +14,6 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
-    apply from: 'https://raw.githubusercontent.com/rzrasel/maven-upload/master/bintray.gradle'
-    apply from: 'https://raw.githubusercontent.com/rzrasel/maven-upload/master/publications.gradle'
     buildTypes {
         release {
             minifyEnabled false
@@ -24,7 +22,8 @@ android {
     }
 
 }
-
+apply from: 'https://raw.githubusercontent.com/rzrasel/maven-upload/master/bintray.gradle'
+apply from: 'https://raw.githubusercontent.com/rzrasel/maven-upload/master/publications.gradle'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
